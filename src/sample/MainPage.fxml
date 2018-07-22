@@ -17,216 +17,266 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane fx:id="anchorpane" xmlns="http://javafx.com/javafx/8.0.161-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPage">
    <children>
-      <TabPane prefHeight="470.0" prefWidth="427.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab text="Install Softwares">
-               <content>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
-                     <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+      <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="427.0">
+         <children>
+            <TabPane prefHeight="470.0" prefWidth="427.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Install Softwares">
+                     <content>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
                            <children>
-                              <Label text="Internet" />
-                              <VBox alignment="CENTER" prefHeight="429.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #cecece;">
-                                 <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Chrome" textFill="WHITE">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                    <VBox.margin>
-                                       <Insets />
-                                    </VBox.margin>
-                                 </JFXButton>
-                                 <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Firefox" textFill="WHITE">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </JFXButton>
-                                 <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="T.Bird" textFill="WHITE">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </JFXButton>
-                                 <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Telegram" textFill="WHITE">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </JFXButton>
-                                 <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Frands" textFill="WHITE">
-                                    <font>
-                                       <Font size="14.0" />
-                                    </font>
-                                 </JFXButton>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Internet" />
+                                    <VBox alignment="CENTER" prefHeight="429.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #cecece;">
+                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Chrome" textFill="WHITE">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                          <VBox.margin>
+                                             <Insets />
+                                          </VBox.margin>
+                                       </JFXButton>
+                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Firefox" textFill="WHITE">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </JFXButton>
+                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="T.Bird" textFill="WHITE">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </JFXButton>
+                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Telegram" textFill="WHITE">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </JFXButton>
+                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Frands" textFill="WHITE">
+                                          <font>
+                                             <Font size="14.0" />
+                                          </font>
+                                       </JFXButton>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Tools" />
+                                    <VBox alignment="CENTER" prefHeight="435.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #cecece;">
+                                       <children>
+                                          <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="HTop" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="33.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Xterm" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="33.0" layoutY="221.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Package manager" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="31.0" layoutY="196.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Tweak Tool" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Entertainment" />
+                                    <VBox alignment="CENTER" prefHeight="437.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #cecece;">
+                                       <children>
+                                          <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="VLC" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="38.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5572db" style="-fx-background-color: #5572db;" text="Spotify" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="28.0" layoutY="221.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5572db" style="-fx-background-color: #5572db;" text="Rythmbox" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="13.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <Label text="Programming" />
+                                    <VBox alignment="CENTER" prefHeight="426.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #cecece;">
+                                       <children>
+                                          <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="JAVA" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="34.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Python" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="34.0" layoutY="221.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Buld Essentials" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="34.0" layoutY="236.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Netbeans" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="34.0" layoutY="251.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Codeblocks" textFill="WHITE" />
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </VBox>
+                                 </children>
                               </VBox>
                            </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
+                        </HBox>
+                     </content>
+                </Tab>
+                <Tab text="Change Permission">
+                     <content>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <Label text="Tools" />
-                              <VBox alignment="CENTER" prefHeight="435.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #cecece;">
+                              <VBox>
                                  <children>
-                                    <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="HTop" textFill="WHITE">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
-                                    <JFXButton layoutX="33.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Xterm" textFill="WHITE">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
-                                    <JFXButton layoutX="33.0" layoutY="221.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Package manager" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
-                                    <JFXButton layoutX="31.0" layoutY="196.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Tweak Tool" textFill="WHITE" wrapText="true">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
+                                    <Label text="Directory Chooser">
+                                       <VBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
+                                       <children>
+                                          <JFXTextField fx:id="locationPathDir" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
+                                          <JFXButton mnemonicParsing="false" onAction="#openBrowserDir" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose Directory" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Label text="File Chooser">
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
+                                       <children>
+                                          <JFXTextField fx:id="locationPathFile" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
+                                          <JFXButton mnemonicParsing="false" onAction="#openBrowserFile" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose File" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="5.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <GridPane alignment="CENTER" hgap="5.0" prefHeight="120.0" prefWidth="417.0">
+                                <columnConstraints>
+                                    <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" text="Read" GridPane.columnIndex="1" />
+                                    <CheckBox mnemonicParsing="false" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <CheckBox mnemonicParsing="false" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <CheckBox mnemonicParsing="false" text="Write" GridPane.columnIndex="2" />
+                                    <CheckBox mnemonicParsing="false" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <CheckBox mnemonicParsing="false" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <CheckBox mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" />
+                                    <CheckBox mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <CheckBox mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <Label text="Owner" />
+                                    <Label text="Group" GridPane.rowIndex="1" />
+                                    <Label text="Global" GridPane.rowIndex="2" />
                                  </children>
                                  <opaqueInsets>
-                                    <Insets />
+                                    <Insets left="10.0" />
                                  </opaqueInsets>
-                              </VBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <Label text="Entertainment" />
-                              <VBox alignment="CENTER" prefHeight="437.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #cecece;">
-                                 <children>
-                                    <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="VLC" textFill="WHITE" wrapText="true">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
-                                    <JFXButton layoutX="38.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5572db" style="-fx-background-color: #5572db;" text="Spotify" textFill="WHITE" wrapText="true">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
-                                    <JFXButton layoutX="28.0" layoutY="221.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5572db" style="-fx-background-color: #5572db;" text="Rythmbox" textFill="WHITE" wrapText="true">
-                                       <font>
-                                          <Font size="13.0" />
-                                       </font>
-                                    </JFXButton>
-                                 </children>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                              </VBox>
-                           </children>
-                        </VBox>
-                        <VBox prefHeight="200.0" prefWidth="100.0">
-                           <children>
-                              <Label text="Programming" />
-                              <VBox alignment="CENTER" prefHeight="426.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #cecece;">
-                                 <children>
-                                    <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="JAVA" textFill="WHITE">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
-                                    <JFXButton layoutX="34.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Python" textFill="WHITE">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
-                                    <JFXButton layoutX="34.0" layoutY="221.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Buld Essentials" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
-                                    <JFXButton layoutX="34.0" layoutY="236.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Netbeans" textFill="WHITE">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </JFXButton>
-                                    <JFXButton layoutX="34.0" layoutY="251.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Codeblocks" textFill="WHITE" />
-                                 </children>
-                                 <opaqueInsets>
-                                    <Insets />
-                                 </opaqueInsets>
-                              </VBox>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
-               </content>
-          </Tab>
-          <Tab text="Change Permission">
-               <content>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="349.0" prefWidth="427.0" spacing="30.0">
-                           <children>
-                              <JFXTextField fx:id="locationPath" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
-                              <JFXButton mnemonicParsing="false" onAction="#openBrowser" prefHeight="34.0" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose File" textFill="#ebebeb">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </GridPane>
+                              <JFXButton mnemonicParsing="false" prefHeight="42.0" prefWidth="168.0" style="-fx-background-color: #ff5566;" text="Change Permission!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </VBox.margin>
                                  <font>
-                                    <Font name="System Bold" size="12.0" />
+                                    <Font name="System Bold" size="13.0" />
                                  </font>
                               </JFXButton>
-                           </children></HBox>
-                        <GridPane alignment="CENTER" hgap="5.0" prefHeight="145.0" prefWidth="417.0">
-                          <columnConstraints>
-                              <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                          </columnConstraints>
-                          <rowConstraints>
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                          </rowConstraints>
-                           <children>
-                              <CheckBox mnemonicParsing="false" text="Read" GridPane.columnIndex="1" />
-                              <CheckBox mnemonicParsing="false" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <CheckBox mnemonicParsing="false" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <CheckBox mnemonicParsing="false" text="Write" GridPane.columnIndex="2" />
-                              <CheckBox mnemonicParsing="false" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                              <CheckBox mnemonicParsing="false" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                              <CheckBox mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" />
-                              <CheckBox mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                              <CheckBox mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                              <Label text="Owner" />
-                              <Label text="Group" GridPane.rowIndex="1" />
-                              <Label text="Global" GridPane.rowIndex="2" />
                            </children>
-                           <opaqueInsets>
-                              <Insets left="10.0" />
-                           </opaqueInsets>
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" />
-                           </VBox.margin>
-                        </GridPane>
-                     </children>
-                  </VBox>
-               </content>
-          </Tab>
-            <Tab text="Remove System Files">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-              </content>
-            </Tab>
-            <Tab text="Others">
-              <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-              </content>
-            </Tab>
-        </tabs>
-      </TabPane>
-      <Line endX="100.0" startX="-329.0" stroke="#c6c6c6" />
-      <Label text="Output:" textFill="#6b6b6b">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #050505; -fx-control-inner-background: #2f2f2f;" />
+                        </VBox>
+                     </content>
+                </Tab>
+                  <Tab text="Remove System Files">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="Others">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Line endX="100.0" startX="-329.0" stroke="#c6c6c6" />
+            <Label text="Output:" textFill="#6b6b6b">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #050505; -fx-control-inner-background: #2f2f2f;" />
+         </children>
+      </VBox>
    </children>
-</VBox>
+</AnchorPane>

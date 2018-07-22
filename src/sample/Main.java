@@ -14,7 +14,7 @@ public class Main extends Application {
     public static final String mainPage="MainPage.fxml";
 
 
-    private static Stage parentWindow;
+    public static Stage parentWindow;
     @Override
     public void start(Stage primaryStage) throws Exception{
         parentWindow=primaryStage;
