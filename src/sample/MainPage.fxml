@@ -3,8 +3,12 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextArea?>
@@ -17,11 +21,29 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="anchorpane" xmlns="http://javafx.com/javafx/8.0.161-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPage">
+<AnchorPane fx:id="anchorpane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPage">
    <children>
       <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="427.0">
          <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Exit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Settings" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
             <TabPane prefHeight="470.0" prefWidth="427.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
                 <Tab text="Install Softwares">
@@ -86,7 +108,7 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton layoutX="31.0" layoutY="196.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Tweak Tool" textFill="WHITE" wrapText="true">
+                                          <JFXButton layoutX="31.0" layoutY="196.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Tweak Tool" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -258,9 +280,62 @@
                      </content>
                 </Tab>
                   <Tab text="Remove System Files">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
+                     <content>
+                        <VBox>
+                           <children>
+                              <Label text="Directory Chooser">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
+                                 <children>
+                                    <JFXTextField fx:id="locationPathDir" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
+                                    <JFXButton mnemonicParsing="false" onAction="#openBrowserDir" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose Directory" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label text="File Chooser">
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </Label>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
+                                 <children>
+                                    <JFXTextField fx:id="locationPathFile" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
+                                    <JFXButton mnemonicParsing="false" onAction="#openBrowserFile" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose File" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <JFXButton mnemonicParsing="false" prefHeight="38.0" prefWidth="98.0" style="-fx-background-color: #ff5566;" text="Delete" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="169.0" top="70.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                        </VBox>
+                     </content>
                   </Tab>
                   <Tab text="Others">
                     <content>
@@ -275,7 +350,10 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #050505; -fx-control-inner-background: #2f2f2f;" />
+            <TextArea editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #050505; -fx-control-inner-background: #2f2f2f;">
+               <cursor>
+                  <Cursor fx:constant="DISAPPEAR" />
+               </cursor></TextArea>
          </children>
       </VBox>
    </children>
