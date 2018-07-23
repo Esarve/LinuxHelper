@@ -14,11 +14,11 @@ public class ActionsISDeb {
 
     public StringBuffer installSofts(String soft){
         try{
-            String targert = new String("apt-get --assume-yes install chromium-browser");
+            String targert = new String("/home/sourav/Desktop/scripts/helloworld.sh");
             Runtime rt = Runtime.getRuntime();
             Process proc = rt.exec(targert);
-//            BufferedWriter writer =new BufferedWriter(new OutputStreamWriter(proc.getOutputStream()));
-//            writer.write("samsung5");
+            BufferedWriter writer =new BufferedWriter(new OutputStreamWriter(proc.getOutputStream()));
+            writer.write("PASSWORD");
             proc.waitFor();
             StringBuffer output = new StringBuffer();
             BufferedReader reader =  new BufferedReader(new InputStreamReader(proc.getInputStream()));
