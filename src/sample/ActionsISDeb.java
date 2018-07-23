@@ -14,7 +14,7 @@ public class ActionsISDeb {
 
     public StringBuffer installSofts(String soft){
         try{
-            String targert = new String("pt-get --assume-yes install chromium-browser");
+            String targert = new String("apt-get --assume-yes install chromium-browser");
             Runtime rt = Runtime.getRuntime();
             Process proc = rt.exec(targert);
 //            BufferedWriter writer =new BufferedWriter(new OutputStreamWriter(proc.getOutputStream()));
