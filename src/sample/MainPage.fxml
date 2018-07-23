@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
@@ -54,7 +55,7 @@
                                  <children>
                                     <Label text="Internet" />
                                     <VBox alignment="CENTER" prefHeight="429.0" prefWidth="100.0" spacing="20.0" style="-fx-border-color: #cecece;">
-                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Chrome" textFill="WHITE">
+                                       <JFXButton fx:id="insChrome" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Chrome" textFill="WHITE">
                                           <font>
                                              <Font size="14.0" />
                                           </font>
@@ -62,22 +63,22 @@
                                              <Insets />
                                           </VBox.margin>
                                        </JFXButton>
-                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Firefox" textFill="WHITE">
+                                       <JFXButton fx:id="insFFox" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Firefox" textFill="WHITE">
                                           <font>
                                              <Font size="14.0" />
                                           </font>
                                        </JFXButton>
-                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="T.Bird" textFill="WHITE">
+                                       <JFXButton fx:id="insTBird" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="T.Bird" textFill="WHITE">
                                           <font>
                                              <Font size="14.0" />
                                           </font>
                                        </JFXButton>
-                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Telegram" textFill="WHITE">
+                                       <JFXButton fx:id="insTG" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Telegram" textFill="WHITE">
                                           <font>
                                              <Font size="14.0" />
                                           </font>
                                        </JFXButton>
-                                       <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Frands" textFill="WHITE">
+                                       <JFXButton fx:id="insDeluge" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Deluge" textFill="WHITE">
                                           <font>
                                              <Font size="14.0" />
                                           </font>
@@ -192,7 +193,7 @@
                                  <children>
                                     <Label text="Directory Chooser">
                                        <VBox.margin>
-                                          <Insets left="5.0" top="5.0" />
+                                          <Insets left="10.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
                                     <HBox alignment="CENTER" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
@@ -205,12 +206,12 @@
                                           </JFXButton>
                                        </children>
                                        <VBox.margin>
-                                          <Insets left="5.0" right="5.0" />
+                                          <Insets left="10.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </HBox>
                                     <Label text="File Chooser">
                                        <VBox.margin>
-                                          <Insets left="5.0" />
+                                          <Insets left="10.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                        <padding>
                                           <Insets top="5.0" />
@@ -229,7 +230,7 @@
                                           <Insets bottom="5.0" />
                                        </padding>
                                        <VBox.margin>
-                                          <Insets left="5.0" right="5.0" />
+                                          <Insets left="10.0" right="10.0" top="5.0" />
                                        </VBox.margin>
                                     </HBox>
                                  </children>
@@ -338,9 +339,32 @@
                      </content>
                   </Tab>
                   <Tab text="Others">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Schedule Shutdown" />
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #cecece;">
+                                 <children>
+                                    <JFXTimePicker defaultColor="#5572db" prefHeight="26.0" prefWidth="178.0" promptText="Select Time">
+                                       <HBox.margin>
+                                          <Insets right="20.0" />
+                                       </HBox.margin></JFXTimePicker>
+                                    <JFXButton mnemonicParsing="false" prefHeight="44.0" prefWidth="112.0" style="-fx-background-color: #ff5566;" text="Schedule Shutdown" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
                   </Tab>
               </tabs>
             </TabPane>
@@ -349,8 +373,11 @@
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="5.0" />
+               </VBox.margin>
             </Label>
-            <TextArea editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #050505; -fx-control-inner-background: #2f2f2f;">
+            <TextArea fx:id="outputTA" editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #050505; -fx-control-inner-background: #2f2f2f;">
                <cursor>
                   <Cursor fx:constant="DISAPPEAR" />
                </cursor></TextArea>

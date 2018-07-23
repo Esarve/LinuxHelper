@@ -6,8 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
 public class Main extends Application {
 
     public static final String landingPage="LandingPage.fxml";
@@ -30,7 +28,7 @@ public class Main extends Application {
         launch(args);
     }
 
-    public void loadScene(String  fxml) throws IOException{
+    public void loadScene(String  fxml) throws Exception{
         Parent pagetoload;
         pagetoload= FXMLLoader.load(getClass().getResource(fxml));
         Scene scene = new Scene(pagetoload);

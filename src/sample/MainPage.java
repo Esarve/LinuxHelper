@@ -1,11 +1,12 @@
 package sample;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -13,6 +14,20 @@ import javafx.stage.Stage;
 import java.io.File;
 
 public class MainPage {
+
+    @FXML
+    public JFXButton insChrome;
+    @FXML
+    public JFXButton insFFox;
+    @FXML
+    public JFXButton insTBird;
+    @FXML
+    public JFXButton insTG;
+    @FXML
+    public JFXButton insDeluge;
+    @FXML
+    public TextArea outputTA;
+
     @FXML
     JFXTextField locationPathDir;
 
@@ -22,6 +37,7 @@ public class MainPage {
     @FXML
     AnchorPane anchorpane;
 
+    ActionsISDeb action = new ActionsISDeb();
     @FXML
     void openBrowserDir(ActionEvent event){
         DirectoryChooser directoryChooser = new DirectoryChooser();
@@ -44,6 +60,26 @@ public class MainPage {
         }
     }
 
+    @FXML
+    void installInternetSofts(ActionEvent event){
+        Button btn =  (Button) event.getSource();
+        String btnId = btn.getId();
+
+        switch (btnId){
+            case "insChrome":
+                StringBuffer output= action.installSofts(action.chrome);
+                outputTA.setText(output.toString());
+                break;
+            case "insFFox":
+                break;
+            case "insTBird":
+                break;
+            case "insTG":
+                break;
+            case "insDeluge":
+                break;
+        }
+    }
 
 
 

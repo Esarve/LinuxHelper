@@ -15,7 +15,7 @@ public class LandingPage {
 
     Main accessmain = new Main();
 
-    public void openDebMainPanel(MouseEvent mouseEvent) throws IOException {
+    public void openDebMainPanel(MouseEvent mouseEvent) throws Exception {
         accessmain.loadScene(Main.mainPage);
     }
 }
