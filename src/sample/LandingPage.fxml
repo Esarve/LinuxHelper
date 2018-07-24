@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="427.0" spacing="70.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LandingPage">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="427.0" spacing="70.0" xmlns="http://javafx.com/javafx/8.0.161-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LandingPage">
    <children>
       <Label text="Choose yout Distribution!" textFill="#393939">
          <font>
@@ -15,14 +15,14 @@
          </font>
       </Label>
       <JFXRippler maskType="CIRCLE" ripplerFill="#ff0069" style="-jfx-rippler-recenter: true;">
-      <ImageView fx:id="deb" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#openDebMainPanel" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#openDebMainPanel" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@res/deb.png" />
          </image>
       </ImageView>
       </JFXRippler>
       <JFXRippler maskType="CIRCLE" ripplerFill="#00acff">
-      <ImageView fx:id="arch" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@res/arch.png" />
          </image></ImageView>

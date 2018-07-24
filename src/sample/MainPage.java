@@ -22,7 +22,7 @@ public class MainPage {
     @FXML
     public JFXButton insTBird;
     @FXML
-    public JFXButton insTG;
+    public JFXButton insEmpathy;
     @FXML
     public JFXButton insDeluge;
     @FXML
@@ -37,7 +37,9 @@ public class MainPage {
     @FXML
     AnchorPane anchorpane;
 
-    ActionsISDeb action = new ActionsISDeb();
+    ActionsDeb action = new ActionsDeb();
+    StringBuffer output = new StringBuffer();
+
     @FXML
     void openBrowserDir(ActionEvent event){
         DirectoryChooser directoryChooser = new DirectoryChooser();
@@ -61,23 +63,31 @@ public class MainPage {
     }
 
     @FXML
-    void installInternetSofts(ActionEvent event){
+    void installInternetSofts(ActionEvent event)throws Exception{
         Button btn =  (Button) event.getSource();
         String btnId = btn.getId();
 
         switch (btnId){
             case "insChrome":
-                StringBuffer output= action.installSofts(action.chrome);
+                output= action.installSofts(action.chrome);
                 outputTA.setText(output.toString());
                 break;
-            case "insFFox":
-                break;
-            case "insTBird":
-                break;
-            case "insTG":
-                break;
-            case "insDeluge":
-                break;
+//            case "insFFox":
+//                output=action.installSofts(action.firefox);
+//                outputTA.setText(output.toString());
+//                break;
+//            case "insTBird":
+//                output=action.installSofts(action.thunderbird);
+//                outputTA.setText(output.toString());
+//                break;
+//            case "insDeluge":
+//                output=action.installSofts(action.deluge);
+//                outputTA.setText(output.toString());
+//                break;
+//            case "insEmpathy":
+//                output=action.installSofts(action.deluge);
+//                outputTA.setText(output.toString());
+//                break;
         }
     }
 
