@@ -7,17 +7,10 @@ import java.util.concurrent.TimeoutException;
 
 public class ActionsDeb {
 
-    public String chrome = "chromium-browser";
-    public String htop= "htop";
-    public String firefox = "firefox";
-    public String thunderbird = "thunderbird";
-    public String deluge = "deluge";
-    public String empathy = "empathy";
-
     public StringBuffer installSofts(String soft)throws Exception {
         try{
 
-            Process process = Runtime.getRuntime().exec("apt-get install -y "+chrome);
+            Process process = Runtime.getRuntime().exec("apt-get install -y "+soft);
 //            BufferedWriter writer =new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
 //            writer.write("samsung5");
 

@@ -38,6 +38,7 @@ public class MainPage {
     AnchorPane anchorpane;
 
     ActionsDeb action = new ActionsDeb();
+    PackageNames packageNames = new PackageNames();
     StringBuffer output = new StringBuffer();
 
     @FXML
@@ -69,25 +70,25 @@ public class MainPage {
 
         switch (btnId){
             case "insChrome":
-                output= action.installSofts(action.chrome);
+                output= action.installSofts(packageNames.chrome);
                 outputTA.setText(output.toString());
                 break;
-//            case "insFFox":
-//                output=action.installSofts(action.firefox);
-//                outputTA.setText(output.toString());
-//                break;
-//            case "insTBird":
-//                output=action.installSofts(action.thunderbird);
-//                outputTA.setText(output.toString());
-//                break;
-//            case "insDeluge":
-//                output=action.installSofts(action.deluge);
-//                outputTA.setText(output.toString());
-//                break;
-//            case "insEmpathy":
-//                output=action.installSofts(action.deluge);
-//                outputTA.setText(output.toString());
-//                break;
+            case "ionsFFox":
+                output=action.installSofts(packageNames.firefox);
+                outputTA.setText(output.toString());
+                break;
+            case "insTBird":
+                output=action.installSofts(packageNames.thunderbird);
+                outputTA.setText(output.toString());
+                break;
+            case "insDeluge":
+                output=action.installSofts(packageNames.deluge);
+                outputTA.setText(output.toString());
+                break;
+            case "insEmpathy":
+                output=action.installSofts(packageNames.deluge);
+                outputTA.setText(output.toString());
+                break;
         }
     }
 

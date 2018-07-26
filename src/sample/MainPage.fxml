@@ -22,7 +22,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorpane" xmlns="http://javafx.com/javafx/8.0.161-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPage">
+<AnchorPane fx:id="anchorpane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPage">
    <children>
       <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="427.0">
          <children>
@@ -99,7 +99,7 @@
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton layoutX="33.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Xterm" textFill="WHITE">
+                                          <JFXButton layoutX="33.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Fastboot" textFill="WHITE">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -110,6 +110,11 @@
                                              </font>
                                           </JFXButton>
                                           <JFXButton layoutX="31.0" layoutY="196.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Tweak Tool" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton layoutX="20.0" layoutY="154.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="ADB" textFill="WHITE">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
