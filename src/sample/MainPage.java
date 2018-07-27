@@ -27,6 +27,16 @@ public class MainPage {
     public JFXButton insDeluge;
     @FXML
     public TextArea outputTA;
+    @FXML
+    public JFXButton insHtop;
+    @FXML
+    public JFXButton insFboot;
+    @FXML
+    public JFXButton insPkgMngr;
+    @FXML
+    public JFXButton insTweak;
+    @FXML
+    public JFXButton insAdb;
 
     @FXML
     JFXTextField locationPathDir;
