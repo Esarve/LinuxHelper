@@ -11,8 +11,8 @@ public class ActionsDeb {
         try{
 
             Process process = Runtime.getRuntime().exec("apt-get install -y "+soft);
-//            BufferedWriter writer =new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
-//            writer.write("samsung5");
+            /*BufferedWriter writer =new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
+            writer.write("samsung5");*/
 
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(
@@ -25,7 +25,7 @@ public class ActionsDeb {
 
             try {
 
-                process.waitFor(5,TimeUnit.SECONDS);
+                process.waitFor();
 
             }catch (InterruptedException e){
 
@@ -37,6 +37,43 @@ public class ActionsDeb {
                 line=reader.readLine();
                 output.append(line+"\n");
             }
+            System.out.println(output.toString());
+
+            return output;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public StringBuffer initializaCache(){
+        try {
+            Process process = Runtime.getRuntime().exec("apt-get -y update");
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(
+                            process.getInputStream()
+                    )
+            );
+
+            StringBuffer output = new StringBuffer();
+            String line ="";
+
+            try {
+
+                process.waitFor();
+
+            }catch (InterruptedException e){
+
+                e.printStackTrace();
+            }
+
+            while (reader.ready()){
+                line=reader.readLine();
+                output.append(line+"\n");
+            }
+
             System.out.println(output.toString());
 
             return output;

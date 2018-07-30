@@ -22,9 +22,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorpane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPage">
+<AnchorPane fx:id="anchorpane" xmlns="http://javafx.com/javafx/8.0.161-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPage">
    <children>
-      <VBox alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="427.0">
+      <VBox fx:id="vbx" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="427.0">
          <children>
             <MenuBar>
               <menus>
@@ -203,8 +203,8 @@
                                     </Label>
                                     <HBox alignment="CENTER" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
                                        <children>
-                                          <JFXTextField fx:id="locationPathDir" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
-                                          <JFXButton mnemonicParsing="false" onAction="#openBrowserDir" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose Directory" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
+                                          <JFXTextField fx:id="pathDirPerm" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="Folder Path" />
+                                          <JFXButton fx:id="directoryPerm" mnemonicParsing="false" onAction="#openBrowser" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose Directory" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
                                              <font>
                                                 <Font name="System Bold" size="12.0" />
                                              </font>
@@ -224,8 +224,8 @@
                                     </Label>
                                     <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
                                        <children>
-                                          <JFXTextField fx:id="locationPathFile" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
-                                          <JFXButton mnemonicParsing="false" onAction="#openBrowserFile" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose File" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
+                                          <JFXTextField fx:id="locationPathFile" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File Path" />
+                                          <JFXButton fx:id="filePerm" mnemonicParsing="false" onAction="#openBrowser" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose File" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
                                              <font>
                                                 <Font name="System Bold" size="12.0" />
                                              </font>
@@ -256,15 +256,15 @@
                                     <Label text="Owner" />
                                     <Label text="Group" GridPane.rowIndex="1" />
                                     <Label text="Global" GridPane.rowIndex="2" />
-                                    <JFXCheckBox mnemonicParsing="false" text="Read" GridPane.columnIndex="1" />
-                                    <JFXCheckBox mnemonicParsing="false" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <JFXCheckBox mnemonicParsing="false" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <JFXCheckBox mnemonicParsing="false" text="Write" GridPane.columnIndex="2" />
-                                    <JFXCheckBox mnemonicParsing="false" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <JFXCheckBox mnemonicParsing="false" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <JFXCheckBox mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" />
-                                    <JFXCheckBox mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                    <JFXCheckBox mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <JFXCheckBox mnemonicParsing="false" fx:id="readOw" text="Read" GridPane.columnIndex="1" />
+                                    <JFXCheckBox mnemonicParsing="false" fx:id="readGr" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <JFXCheckBox mnemonicParsing="false" fx:id="readGb" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <JFXCheckBox mnemonicParsing="false" fx:id="writeOw" text="Write" GridPane.columnIndex="2" />
+                                    <JFXCheckBox mnemonicParsing="false" fx:id="writeGr" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <JFXCheckBox mnemonicParsing="false" fx:id="writeGb" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <JFXCheckBox mnemonicParsing="false" fx:id="ExeOw" text="Execute" GridPane.columnIndex="3" />
+                                    <JFXCheckBox mnemonicParsing="false" fx:id="ExeGr" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <JFXCheckBox mnemonicParsing="false" fx:id="ExeGb" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                                  </children>
                                  <opaqueInsets>
                                     <Insets left="10.0" />
@@ -273,7 +273,7 @@
                                     <Insets bottom="10.0" left="10.0" right="10.0" />
                                  </VBox.margin>
                               </GridPane>
-                              <JFXButton mnemonicParsing="false" prefHeight="42.0" prefWidth="168.0" style="-fx-background-color: #ff5566;" text="Change Permission!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                              <JFXButton mnemonicParsing="false" style="-fx-background-color: #ff5566;" text="Change Permission!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                  <VBox.margin>
                                     <Insets bottom="5.0" top="5.0" />
                                  </VBox.margin>
@@ -291,25 +291,25 @@
                            <children>
                               <Label text="Directory Chooser">
                                  <VBox.margin>
-                                    <Insets left="5.0" top="5.0" />
+                                    <Insets left="10.0" right="10.0" top="5.0" />
                                  </VBox.margin>
                               </Label>
                               <HBox alignment="CENTER" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
                                  <children>
-                                    <JFXTextField fx:id="locationPathDir" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
-                                    <JFXButton mnemonicParsing="false" onAction="#openBrowserDir" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose Directory" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
+                                    <JFXTextField fx:id="pathDirRmv" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
+                                    <JFXButton fx:id="directoryRmv" mnemonicParsing="false" onAction="#openBrowser" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose Directory" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
                                     </JFXButton>
                                  </children>
                                  <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
+                                    <Insets left="10.0" right="10.0" top="5.0" />
                                  </VBox.margin>
                               </HBox>
                               <Label text="File Chooser">
                                  <VBox.margin>
-                                    <Insets left="5.0" />
+                                    <Insets left="10.0" right="10.0" top="5.0" />
                                  </VBox.margin>
                                  <padding>
                                     <Insets top="5.0" />
@@ -318,7 +318,7 @@
                               <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
                                  <children>
                                     <JFXTextField fx:id="locationPathFile" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
-                                    <JFXButton mnemonicParsing="false" onAction="#openBrowserFile" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose File" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
+                                    <JFXButton fx:id="fileRmv" mnemonicParsing="false" onAction="#openBrowser" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose File" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
                                        <font>
                                           <Font name="System Bold" size="12.0" />
                                        </font>
@@ -328,7 +328,7 @@
                                     <Insets bottom="5.0" />
                                  </padding>
                                  <VBox.margin>
-                                    <Insets left="5.0" right="5.0" />
+                                    <Insets left="10.0" right="10.0" top="5.0" />
                                  </VBox.margin>
                               </HBox>
                               <JFXButton mnemonicParsing="false" prefHeight="38.0" prefWidth="98.0" style="-fx-background-color: #ff5566;" text="Delete" textFill="WHITE">
