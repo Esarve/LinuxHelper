@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TabPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -78,6 +79,8 @@ public class MainPage implements Initializable {
     public JFXTextField pathDirRmv;
     @FXML
     public JFXTextField pathFileRmv;
+    @FXML
+    public TabPane tabpane;
     @FXML
     AnchorPane anchorpane;
 

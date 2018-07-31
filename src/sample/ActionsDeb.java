@@ -5,7 +5,12 @@ import java.io.*;
 
 public class ActionsDeb {
 
-    public StringBuffer installSofts(String soft)throws Exception {
+    MainPage mainPage = new MainPage();
+
+    public StringBuffer installSofts(String soft) {
+
+        mainPage.tabpane.setDisable(true);
+
         try{
 
             Process process = Runtime.getRuntime().exec("apt-get install -y "+soft);
@@ -36,6 +41,8 @@ public class ActionsDeb {
                 output.append(line+"\n");
             }
             System.out.println(output.toString());
+
+            mainPage.tabpane.setDisable(false);
 
             return output;
 
