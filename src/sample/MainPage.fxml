@@ -224,7 +224,7 @@
                                     </Label>
                                     <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
                                        <children>
-                                          <JFXTextField fx:id="locationPathFile" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File Path" />
+                                          <JFXTextField fx:id="pathFilePerm" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File Path" />
                                           <JFXButton fx:id="filePerm" mnemonicParsing="false" onAction="#openBrowser" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose File" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
                                              <font>
                                                 <Font name="System Bold" size="12.0" />
@@ -253,18 +253,18 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Label text="Owner" />
+                                    <Label text="User" />
                                     <Label text="Group" GridPane.rowIndex="1" />
-                                    <Label text="Global" GridPane.rowIndex="2" />
-                                    <JFXCheckBox mnemonicParsing="false" fx:id="readOw" text="Read" GridPane.columnIndex="1" />
-                                    <JFXCheckBox mnemonicParsing="false" fx:id="readGr" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <JFXCheckBox mnemonicParsing="false" fx:id="readGb" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                    <JFXCheckBox mnemonicParsing="false" fx:id="writeOw" text="Write" GridPane.columnIndex="2" />
-                                    <JFXCheckBox mnemonicParsing="false" fx:id="writeGr" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                    <JFXCheckBox mnemonicParsing="false" fx:id="writeGb" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                    <JFXCheckBox mnemonicParsing="false" fx:id="ExeOw" text="Execute" GridPane.columnIndex="3" />
-                                    <JFXCheckBox mnemonicParsing="false" fx:id="ExeGr" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                    <JFXCheckBox mnemonicParsing="false" fx:id="ExeGb" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <Label text="Other" GridPane.rowIndex="2" />
+                                    <JFXCheckBox fx:id="readUsr" mnemonicParsing="false" text="Read" GridPane.columnIndex="1" />
+                                    <JFXCheckBox fx:id="readGr" mnemonicParsing="false" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <JFXCheckBox fx:id="readOt" mnemonicParsing="false" text="Read" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <JFXCheckBox fx:id="writeUsr" mnemonicParsing="false" text="Write" GridPane.columnIndex="2" />
+                                    <JFXCheckBox fx:id="writeGr" mnemonicParsing="false" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <JFXCheckBox fx:id="writeOt" mnemonicParsing="false" text="Write" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <JFXCheckBox fx:id="exeUsr" mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" />
+                                    <JFXCheckBox fx:id="ExeGr" mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <JFXCheckBox fx:id="exeOt" mnemonicParsing="false" text="Execute" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                                  </children>
                                  <opaqueInsets>
                                     <Insets left="10.0" />
@@ -273,7 +273,7 @@
                                     <Insets bottom="10.0" left="10.0" right="10.0" />
                                  </VBox.margin>
                               </GridPane>
-                              <JFXButton mnemonicParsing="false" style="-fx-background-color: #ff5566;" text="Change Permission!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                              <JFXButton mnemonicParsing="false" onAction="#changePerm" style="-fx-background-color: #ff5566;" text="Change Permission!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                  <VBox.margin>
                                     <Insets bottom="5.0" top="5.0" />
                                  </VBox.margin>
@@ -317,7 +317,7 @@
                               </Label>
                               <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="120.0" prefWidth="427.0" spacing="30.0" style="-fx-border-color: #cecece;">
                                  <children>
-                                    <JFXTextField fx:id="locationPathFile" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
+                                    <JFXTextField fx:id="pathFileRmv" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="242.0" promptText="File/Folder Path" />
                                     <JFXButton fx:id="fileRmv" mnemonicParsing="false" onAction="#openBrowser" prefWidth="86.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="Choose File" textAlignment="CENTER" textFill="#ebebeb" wrapText="true">
                                        <font>
                                           <Font name="System Bold" size="12.0" />

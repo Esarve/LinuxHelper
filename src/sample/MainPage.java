@@ -53,37 +53,38 @@ public class MainPage implements Initializable {
     @FXML
     public VBox vbx;
     @FXML
-    public JFXCheckBox readOw;
+    public JFXCheckBox readUsr;
     @FXML
     public JFXCheckBox readGr;
     @FXML
-    public JFXCheckBox readGb;
+    public JFXCheckBox readOt;
     @FXML
-    public JFXCheckBox writeOw;
+    public JFXCheckBox writeUsr;
     @FXML
     public JFXCheckBox writeGr;
     @FXML
-    public JFXCheckBox writeGb;
+    public JFXCheckBox writeOt;
     @FXML
-    public JFXCheckBox ExeOw;
+    public JFXCheckBox exeUsr;
     @FXML
     public JFXCheckBox ExeGr;
     @FXML
-    public JFXCheckBox ExeGb;
+    public JFXCheckBox exeOt;
     @FXML
-    JFXTextField pathDirPerm;
+    public JFXTextField pathDirPerm;
     @FXML
-    JFXTextField pathFilePerm;
+    public JFXTextField pathFilePerm;
     @FXML
-    JFXTextField pathDirRmv;
+    public JFXTextField pathDirRmv;
     @FXML
-    JFXTextField pathFileRmv;
+    public JFXTextField pathFileRmv;
     @FXML
     AnchorPane anchorpane;
 
     ActionsDeb action = new ActionsDeb();
     PackageNames packageNames = new PackageNames();
     StringBuffer output = new StringBuffer();
+    Perm_dlt_others permdlt = new Perm_dlt_others();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -156,6 +157,53 @@ public class MainPage implements Initializable {
                 outputTA.setText(output.toString());
                 break;
         }
+    }
+
+    @FXML
+    void changePerm(ActionEvent event){
+        int getcode=0;
+        StringBuffer perm = new StringBuffer();
+        String getperm="";
+        chnagePermAnotherOneDontKnowWhy(perm, pathDirPerm);
+
+        chnagePermAnotherOneDontKnowWhy(perm, pathFilePerm);
+    }
+
+    private void chnagePermAnotherOneDontKnowWhy(StringBuffer perm, JFXTextField checkField) {
+        int getcode;
+        String getperm;
+        if(!checkField.getText().isEmpty()){
+            getcode = calculateScore();
+            getperm = permdlt.getPermission(checkField.getText());
+            perm.append("Current Permission: \n"+getperm+"\n");
+            outputTA.setText(perm.toString());
+
+            permdlt.ChnagePermission(checkField.getText() , Integer.toString(getcode));
+
+            getperm = permdlt.getPermission(checkField.getText());
+            perm.append("New Permission: \n"+getperm+"\n");
+            outputTA.setText(perm.toString());
+        }
+    }
+
+    private int calculateScore(){
+        int usr = 0;
+        int ot = 0;
+        int gr = 0;
+
+        if(readUsr.isSelected()) usr+=4;
+        if(writeUsr.isSelected()) usr+=2;
+        if(exeUsr.isSelected()) usr+=1;
+        if(readGr.isSelected()) gr+=4;
+        if(writeGr.isSelected()) gr+=2;
+        if(ExeGr.isSelected()) gr+=1;
+        if(readOt.isSelected()) ot+=4;
+        if(writeOt.isSelected()) ot+=2;
+        if(exeOt.isSelected()) ot+=1;
+
+        int totalScore= (usr*100)+(gr*10)+ot;
+
+        return totalScore;
     }
 
 }
