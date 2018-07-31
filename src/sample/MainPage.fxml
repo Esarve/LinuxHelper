@@ -22,7 +22,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorpane" prefHeight="720.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPage">
+<AnchorPane fx:id="anchorpane" prefHeight="720.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.161-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPage">
    <children>
       <VBox fx:id="vbx" alignment="BOTTOM_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="500.0">
          <children>
@@ -55,7 +55,7 @@
                                  <children>
                                     <Label text="Internet" />
                                     <VBox alignment="CENTER" prefHeight="400.0" prefWidth="0.0" spacing="20.0" style="-fx-border-color: #cecece;">
-                                       <JFXButton fx:id="insChrome" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Chrome" textFill="WHITE">
+                                       <JFXButton fx:id="insChrome" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Chrome" textFill="WHITE">
                                           <font>
                                              <Font size="14.0" />
                                           </font>
@@ -63,22 +63,22 @@
                                              <Insets />
                                           </VBox.margin>
                                        </JFXButton>
-                                       <JFXButton fx:id="insFFox" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Firefox" textFill="WHITE">
+                                       <JFXButton fx:id="insFFox" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Firefox" textFill="WHITE">
                                           <font>
                                              <Font size="14.0" />
                                           </font>
                                        </JFXButton>
-                                       <JFXButton fx:id="insTBird" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="T.Bird" textFill="WHITE">
+                                       <JFXButton fx:id="insTBird" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="T.Bird" textFill="WHITE">
                                           <font>
                                              <Font size="14.0" />
                                           </font>
                                        </JFXButton>
-                                       <JFXButton fx:id="insEmpathy" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Empathy" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                       <JFXButton fx:id="insEmpathy" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Empathy" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                           <font>
                                              <Font size="12.0" />
                                           </font>
                                        </JFXButton>
-                                       <JFXButton fx:id="insDeluge" onAction="#installInternetSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Deluge" textFill="WHITE">
+                                       <JFXButton fx:id="insDeluge" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7d97ee" style="-fx-background-color: #466df6;" text="Deluge" textFill="WHITE">
                                           <font>
                                              <Font size="14.0" />
                                           </font>
@@ -94,27 +94,27 @@
                                     <Label text="Tools" />
                                     <VBox alignment="CENTER" prefHeight="400.0" prefWidth="140.0" spacing="20.0" style="-fx-border-color: #cecece;">
                                        <children>
-                                          <JFXButton fx:id="insHtop" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="HTop" textFill="WHITE">
+                                          <JFXButton fx:id="insHtop" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="HTop" textFill="WHITE">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton fx:id="insFboot" layoutX="33.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Fastboot" textFill="WHITE">
+                                          <JFXButton fx:id="insFboot" layoutX="33.0" layoutY="206.0" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Fastboot" textFill="WHITE">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton fx:id="insPkgMngr" layoutX="33.0" layoutY="221.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Package manager" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                          <JFXButton fx:id="insPkgMngr" layoutX="33.0" layoutY="221.0" onAction="#installSofts" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Package manager" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton fx:id="insTweak" layoutX="31.0" layoutY="196.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Tweak Tool" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                          <JFXButton fx:id="insTweak" layoutX="31.0" layoutY="196.0" onAction="#installSofts" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="Tweak Tool" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton fx:id="insAdb" layoutX="20.0" layoutY="154.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="ADB" textFill="WHITE">
+                                          <JFXButton fx:id="insAdb" layoutX="20.0" layoutY="154.0" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7ba0eb" style="-fx-background-color: #548afd;" text="ADB" textFill="WHITE">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
@@ -131,17 +131,17 @@
                                     <Label text="Entertainment" />
                                     <VBox alignment="CENTER" prefHeight="400.0" prefWidth="140.0" spacing="20.0" style="-fx-border-color: #cecece;">
                                        <children>
-                                          <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="VLC" textFill="WHITE" wrapText="true">
+                                          <JFXButton fx:id="insVlc" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#7188da" style="-fx-background-color: #5572db;" text="VLC" textFill="WHITE" wrapText="true">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton layoutX="38.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5572db" style="-fx-background-color: #5572db;" text="Spotify" textFill="WHITE" wrapText="true">
+                                          <JFXButton fx:id="insSpotify" layoutX="38.0" layoutY="206.0" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5572db" style="-fx-background-color: #5572db;" text="Spotify" textFill="WHITE" wrapText="true">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton layoutX="28.0" layoutY="221.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5572db" style="-fx-background-color: #5572db;" text="Rythmbox" textFill="WHITE" wrapText="true">
+                                          <JFXButton fx:id="insRythmbox" layoutX="28.0" layoutY="221.0" onAction="#installSofts" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5572db" style="-fx-background-color: #5572db;" text="Rythmbox" textFill="WHITE" wrapText="true">
                                              <font>
                                                 <Font size="13.0" />
                                              </font>
@@ -158,27 +158,27 @@
                                     <Label text="Programming" />
                                     <VBox alignment="CENTER" prefHeight="400.0" prefWidth="140.0" spacing="20.0" style="-fx-border-color: #cecece;">
                                        <children>
-                                          <JFXButton prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="JAVA" textFill="WHITE">
+                                          <JFXButton fx:id="insJava" onAction="#installSofts" prefHeight="40.0" prefWidth="85.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="JAVA" textFill="WHITE">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton layoutX="34.0" layoutY="206.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Python" textFill="WHITE">
+                                          <JFXButton fx:id="insPy" layoutX="34.0" layoutY="206.0" onAction="#installSofts" prefHeight="40.0" prefWidth="85.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Python" textFill="WHITE">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton layoutX="34.0" layoutY="221.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Buld Essentials" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                          <JFXButton fx:id="insBuild" layoutX="34.0" layoutY="221.0" onAction="#installSofts" prefWidth="85.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Buld Essentials" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton layoutX="34.0" layoutY="236.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Netbeans" textFill="WHITE">
+                                          <JFXButton fx:id="insNetbeans" layoutX="34.0" layoutY="236.0" onAction="#installSofts" prefHeight="40.0" prefWidth="85.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Netbeans" textFill="WHITE">
                                              <font>
                                                 <Font size="14.0" />
                                              </font>
                                           </JFXButton>
-                                          <JFXButton layoutX="34.0" layoutY="251.0" prefHeight="40.0" prefWidth="80.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Codeblocks" textFill="WHITE" />
+                                          <JFXButton fx:id="insCb" layoutX="34.0" layoutY="251.0" onAction="#installSofts" prefHeight="40.0" prefWidth="85.0" ripplerFill="#5dbdf5" style="-fx-background-color: #2fa9f2;" text="Codeblocks" textFill="WHITE" />
                                        </children>
                                        <opaqueInsets>
                                           <Insets />

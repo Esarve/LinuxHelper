@@ -10,7 +10,7 @@ public class PackageNames {
     public String thunderbird = "thunderbird";
     public String deluge = "deluge";
     public String empathy = "empathy";
-    public String adn= "android-tools-adb";
+    public String adb= "android-tools-adb";
     public String fastboot = "android-tools-fastboot";
     public String synaptics = "synaptic";
     public String tweaks = "gnome-tweak-tool";

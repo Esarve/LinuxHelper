@@ -5,17 +5,12 @@ import java.io.*;
 
 public class ActionsDeb {
 
-    MainPage mainPage = new MainPage();
 
     public StringBuffer installSofts(String soft) {
 
-        mainPage.tabpane.setDisable(true);
-
         try{
-
+            System.out.println("Package name: "+soft);
             Process process = Runtime.getRuntime().exec("apt-get install -y "+soft);
-            /*BufferedWriter writer =new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
-            writer.write("samsung5");*/
 
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(
@@ -42,7 +37,6 @@ public class ActionsDeb {
             }
             System.out.println(output.toString());
 
-            mainPage.tabpane.setDisable(false);
 
             return output;
 

@@ -82,6 +82,22 @@ public class MainPage implements Initializable {
     @FXML
     public TabPane tabpane;
     @FXML
+    public JFXButton insVlc;
+    @FXML
+    public JFXButton insSpotify;
+    @FXML
+    public JFXButton insRythmbox;
+    @FXML
+    public JFXButton insJava;
+    @FXML
+    public JFXButton insPy;
+    @FXML
+    public JFXButton insBuild;
+    @FXML
+    public JFXButton insNetbeans;
+    @FXML
+    public JFXButton insCb;
+    @FXML
     AnchorPane anchorpane;
 
     ActionsDeb action = new ActionsDeb();
@@ -134,9 +150,12 @@ public class MainPage implements Initializable {
     }
 
     @FXML
-    void installInternetSofts(ActionEvent event) throws Exception {
+    void installSofts(ActionEvent event) throws Exception {
         Button btn =  (Button) event.getSource();
         String btnId = btn.getId();
+        System.out.println(btnId);
+
+        outputTA.setText("Please wait while the operation is on process...");
 
         switch (btnId){
             case "insChrome":
@@ -157,6 +176,58 @@ public class MainPage implements Initializable {
                 break;
             case "insEmpathy":
                 output=action.installSofts(packageNames.deluge);
+                outputTA.setText(output.toString());
+                break;
+            case "insHtop":
+                output=action.installSofts(packageNames.htop);
+                outputTA.setText(output.toString());
+                break;
+            case "insFboot":
+                output=action.installSofts(packageNames.fastboot);
+                outputTA.setText(output.toString());
+                break;
+            case "insPkgMngr":
+                output=action.installSofts(packageNames.synaptics);
+                outputTA.setText(output.toString());
+                break;
+            case "insTweak":
+                output=action.installSofts(packageNames.tweaks);
+                outputTA.setText(output.toString());
+                break;
+            case "insAdb":
+                output=action.installSofts(packageNames.adb);
+                outputTA.setText(output.toString());
+                break;
+            case "insVlc":
+                output=action.installSofts(packageNames.vlc);
+                outputTA.setText(output.toString());
+                break;
+            case "insSpotify":
+                output=action.installSofts("spotify");
+                outputTA.setText(output.toString());
+                break;
+            case "insRythmbox":
+                output=action.installSofts(packageNames.rythmbox);
+                outputTA.setText(output.toString());
+                break;
+            case "insJava":
+                output=action.installSofts(packageNames.jdk);
+                outputTA.setText(output.toString());
+                break;
+            case "insPy":
+                output=action.installSofts(packageNames.python);
+                outputTA.setText(output.toString());
+                break;
+            case "insBuild":
+                output=action.installSofts(packageNames.build);
+                outputTA.setText(output.toString());
+                break;
+            case "insNetbeans":
+                output=action.installSofts(packageNames.netbeans);
+                outputTA.setText(output.toString());
+                break;
+            case "insCb":
+                output=action.installSofts(packageNames.codeblocks);
                 outputTA.setText(output.toString());
                 break;
         }
