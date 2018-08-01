@@ -268,11 +268,13 @@ public class MainPage implements Initializable {
 
     @FXML
     public void delete(ActionEvent event){
-        if (isSafa(pathDirRmv.getText())) {
+        if (isSafe(pathDirRmv.getText())) {
             performdlt(pathDirRmv);
             performdlt(pathFileRmv);
+        }else{
+            outputTA.setText("NOT SAFE TO DELETE!");
         }
-        System.out.println("NOT SAFE");
+
     }
 
     private void performdlt(JFXTextField checkfield){
@@ -328,7 +330,7 @@ public class MainPage implements Initializable {
         return totalScore;
     }
 
-    private boolean isSafa(String string){
+    private boolean isSafe(String string){
         return string.contains("/home/");
     }
 
