@@ -331,7 +331,7 @@
                                     <Insets left="10.0" right="10.0" top="5.0" />
                                  </VBox.margin>
                               </HBox>
-                              <JFXButton mnemonicParsing="false" prefHeight="38.0" prefWidth="98.0" style="-fx-background-color: #ff5566;" text="Delete" textFill="WHITE">
+                              <JFXButton mnemonicParsing="false" onAction="#delete" prefHeight="38.0" prefWidth="98.0" style="-fx-background-color: #ff5566;" text="Delete" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -350,11 +350,11 @@
                               <Label text="Schedule Shutdown" />
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #cecece;">
                                  <children>
-                                    <JFXTimePicker defaultColor="#5572db" prefHeight="26.0" prefWidth="261.0" promptText="Select Time">
+                                    <JFXTimePicker fx:id="time" defaultColor="#5572db" prefHeight="26.0" prefWidth="261.0" promptText="Select Time">
                                        <HBox.margin>
                                           <Insets right="20.0" />
                                        </HBox.margin></JFXTimePicker>
-                                    <JFXButton mnemonicParsing="false" prefHeight="51.0" prefWidth="91.0" style="-fx-background-color: #ff5566;" text="Schedule Shutdown" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                    <JFXButton mnemonicParsing="false" onAction="#scheduleShutdown" prefHeight="51.0" prefWidth="106.0" style="-fx-background-color: #ff5566;" text="Schedule Shutdown" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                        <font>
                                           <Font name="System Bold" size="13.0" />
                                        </font>
@@ -371,12 +371,12 @@
                               </Label>
                               <HBox alignment="CENTER" layoutX="20.0" layoutY="37.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #cecece;">
                                  <children>
-                                    <JFXTextField labelFloat="true" prefHeight="25.0" prefWidth="264.0" promptText="Type your command">
+                                    <JFXTextField fx:id="cmd" labelFloat="true" prefHeight="25.0" prefWidth="264.0" promptText="Type your command">
                                        <HBox.margin>
                                           <Insets right="20.0" />
                                        </HBox.margin>
                                     </JFXTextField>
-                                    <JFXButton mnemonicParsing="false" prefHeight="38.0" prefWidth="66.0" style="-fx-background-color: #21a689;" text="RUN" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                    <JFXButton mnemonicParsing="false" onAction="#run" prefHeight="38.0" prefWidth="66.0" style="-fx-background-color: #21a689;" text="RUN" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                        <font>
                                           <Font name="System Bold" size="13.0" />
                                        </font>

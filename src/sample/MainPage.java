@@ -3,6 +3,7 @@ package sample;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.JFXTimePicker;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
+import java.time.LocalTime;
 import java.util.ResourceBundle;
 
 public class MainPage implements Initializable {
@@ -80,6 +82,8 @@ public class MainPage implements Initializable {
     @FXML
     public JFXTextField pathFileRmv;
     @FXML
+    public JFXTextField cmd;
+    @FXML
     public TabPane tabpane;
     @FXML
     public JFXButton insVlc;
@@ -98,12 +102,15 @@ public class MainPage implements Initializable {
     @FXML
     public JFXButton insCb;
     @FXML
+    public JFXTimePicker time;
+    @FXML
     AnchorPane anchorpane;
 
     ActionsDeb action = new ActionsDeb();
     PackageNames packageNames = new PackageNames();
     StringBuffer output = new StringBuffer();
     Perm_dlt_others permdlt = new Perm_dlt_others();
+    private File file;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -122,7 +129,7 @@ public class MainPage implements Initializable {
             DirectoryChooser directoryChooser = new DirectoryChooser();
             directoryChooser.setTitle("Choose A folder");
             Stage stage = (Stage) anchorpane.getScene().getWindow();
-            File file = directoryChooser.showDialog(stage);
+            file = directoryChooser.showDialog(stage);
             if (btnId.equalsIgnoreCase("directoryPerm")){
                 if (file!=null){
                     pathDirPerm.setText(file.getAbsolutePath());
@@ -136,7 +143,7 @@ public class MainPage implements Initializable {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Choose A folder");
             Stage stage = (Stage) anchorpane.getScene().getWindow();
-            File file = fileChooser.showOpenDialog(stage);
+            file = fileChooser.showOpenDialog(stage);
             if (btnId.equalsIgnoreCase("filePerm")){
                 if (file!=null){
                     pathFilePerm.setText(file.getAbsolutePath());
@@ -235,9 +242,7 @@ public class MainPage implements Initializable {
 
     @FXML
     void changePerm(ActionEvent event){
-        int getcode=0;
         StringBuffer perm = new StringBuffer();
-        String getperm="";
         chnagePermAnotherOneDontKnowWhy(perm, pathDirPerm);
 
         chnagePermAnotherOneDontKnowWhy(perm, pathFilePerm);
@@ -258,6 +263,45 @@ public class MainPage implements Initializable {
             perm.append("New Permission: \n"+getperm+"\n");
             outputTA.setText(perm.toString());
         }
+    }
+
+    @FXML
+    public void delete(ActionEvent event){
+       performdlt(pathDirRmv);
+       performdlt(pathFileRmv);
+    }
+
+    private void performdlt(JFXTextField checkfield){
+
+        if(!checkfield.getText().isEmpty()){
+            System.out.println("Field ID: "+checkfield.getId());
+            if(checkfield.getId().equalsIgnoreCase("pathDirRmv")){
+                permdlt.RemoveDir(checkfield.getText());
+            }
+            if(checkfield.getId().equalsIgnoreCase("pathFileRmv")){
+                permdlt.Removefile(checkfield.getText());
+            }
+            outputTA.setText(checkfield.getText()+ " is Removed");
+        }
+
+    }
+
+    @FXML
+    public void scheduleShutdown(){
+        LocalTime gettime = time.getValue();
+        String selectedtime = gettime.toString();
+        permdlt.shutdown(selectedtime);
+        outputTA.setText("Shutdown Scheduled for "+ selectedtime);
+
+    }
+
+    @FXML
+    public void run(ActionEvent event){
+        String inputcmd = cmd.getText();
+        output=permdlt.execute(inputcmd);
+        outputTA.setText("Command executed successfully!");
+        output.append(outputTA.getText()+ "\n");
+        outputTA.setText(output.toString());
     }
 
     private int calculateScore(){
