@@ -114,10 +114,10 @@ public class MainPage implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
-        /*vbx.setDisable(true);
+        vbx.setDisable(true);
         outputTA.setText("Please wait while te package manager cache updates...");
         output=action.initializaCache();
-        outputTA.setText(output.toString());*/
+        outputTA.setText(output.toString());
         vbx.setDisable(false);
     }
 
