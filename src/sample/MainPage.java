@@ -243,6 +243,7 @@ public class MainPage implements Initializable {
     @FXML
     void changePerm(ActionEvent event){
         StringBuffer perm = new StringBuffer();
+        System.out.println(pathDirPerm.getText());
         chnagePermAnotherOneDontKnowWhy(perm, pathDirPerm);
 
         chnagePermAnotherOneDontKnowWhy(perm, pathFilePerm);
@@ -267,8 +268,11 @@ public class MainPage implements Initializable {
 
     @FXML
     public void delete(ActionEvent event){
-       performdlt(pathDirRmv);
-       performdlt(pathFileRmv);
+        if (isSafa(pathDirRmv.getText())) {
+            performdlt(pathDirRmv);
+            performdlt(pathFileRmv);
+        }
+        System.out.println("NOT SAFE");
     }
 
     private void performdlt(JFXTextField checkfield){
@@ -322,6 +326,10 @@ public class MainPage implements Initializable {
         int totalScore= (usr*100)+(gr*10)+ot;
 
         return totalScore;
+    }
+
+    private boolean isSafa(String string){
+        return string.contains("/home/");
     }
 
 }

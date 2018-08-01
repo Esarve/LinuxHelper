@@ -371,7 +371,7 @@
                               </Label>
                               <HBox alignment="CENTER" layoutX="20.0" layoutY="37.0" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: #cecece;">
                                  <children>
-                                    <JFXTextField fx:id="cmd" labelFloat="true" prefHeight="25.0" prefWidth="264.0" promptText="Type your command">
+                                    <JFXTextField fx:id="cmd" labelFloat="true" prefHeight="26.0" prefWidth="296.0" promptText="Type your command">
                                        <HBox.margin>
                                           <Insets right="20.0" />
                                        </HBox.margin>
